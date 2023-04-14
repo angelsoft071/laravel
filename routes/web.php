@@ -26,7 +26,7 @@ Route::view('/contact', 'contact')->name('contact');
 Route::view('/register', 'auth.register')->name('register');
 Route::view('/login', 'auth.login')->name('login');
 Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('register');
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 // Route::get('/blog', [PostController::class, 'index'])->name('posts.index');
