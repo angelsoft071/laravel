@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
-use App\Models\Book;
+use App\Http\Controllers\PenController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/books', [BookController::class, 'index']);
+
+Route::apiResource('pens', PenController::class);
